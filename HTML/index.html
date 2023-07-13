@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="../picture/logo.png">
+    <link rel="stylesheet" href="../font-awesome-6/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@300&family=Dancing+Script&family=Domine&family=Hanken+Grotesk&family=Inter:wght@300&family=Lato&family=Montserrat:wght@500;600&family=Open+Sans&family=Oswald&family=Outfit&family=Playfair+Display:wght@400;500&family=Poppins:ital,wght@0,300;0,600;1,300&family=Roboto+Condensed:wght@300&family=Roboto+Slab&family=Roboto:wght@400;500&family=Titillium+Web:wght@600&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-5 ">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="../picture/logo.png" alt="logo">
+          </a>
+          <h1 class="text-uppercase fs-6 mt-2 ">weather</h1>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active py-1  px-4" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-3 px-4 py-1  text-capitalize" href="#">news</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-1  text-capitalize" href="#">live camera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-1  text-capitalize" href="#">photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-3 px-4 py-1  text-capitalize" href="#">contact</a>
+              </li>
+              
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+      <!-- body -->
+      <section class="container-fluid" id="search">
+        <div class="wether-img">
+            <div class="container pt-5 position-relative">
+                <input type="text" id="searchBar" class="form-control py-3 rounded-5 border-0" placeholder="find your location...">
+                <button id="click-btn" class="btn btn-info text-white text-capitalize px-4 rounded-5">find</button>
+            </div>
+            <div class="container">
+                <div class="weather-info row mt-4 gx-0 mb-3">
+                    <!-- today card -->
+                <div class="col-lg-4 text-muted">
+                    <div class="location-p1 p-3 ">
+                        <div class="p1-small mb-2 d-flex justify-content-between">
+                            <span class="text-capitalize" id="today"></span>
+                            <span class="text-capitalize" id="today-date"></span>
+                        </div>
+                        <hr>
+                        <div class="p1-larg my-4">
+                            <span class="text-capitalize " id="location"></span>
+                            <div class="icon-day d-flex justify-content-between">
+                                <div>
+                                    <span class="fs-1" id="tempereture"></span>
+                                    <span class="fs-2"><sup>o</sup>c</span>
+
+                                </div>
+                                <img src="" id="todayIcon" width="25%" alt="">
+                            </div>
+                            <p class="text-capitalize todayDisc" id="todayDesc"></p>
+                            <div>
+                                <i class="fa-solid fa-umbrella"></i>
+                                <span class="me-4"><span id="humidty"></span>%</span>
+
+                                <i class="fas fa-wind pl-3 pr-1"></i>
+                                <span  id="wind"></span> <span class="me-4">km/h</span>
+
+                                <i class="fa-solid fa-compass"></i>
+                                <span class="text-capitalize" id="windDir"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- next day card -->
+                <div class="col-lg-4 text-muted">
+                    <div class="location-p2 px-3 py-3">
+                        <div class="p1-small mb-2 d-flex justify-content-center">
+                            <span class="text-capitalize nextDay"></span>
+                        </div>
+                        <hr>
+                        <div class="p1-larg  d-flex justify-content-center align-items-center flex-column">
+                                <img src=" "  class="nextIcon py-2" alt="">
+                                <div class="d-flex justify-content-between">
+                                  <span class="maxDegree my-2 me-1"></span>
+                                  <span class="icon-deg "><sup>o</sup>c</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                  <span class="minDegree pt-3">day</span>
+                                  <span class="icon-deg"><sup>o</sup>c</span>
+                                </div>
+                                <span class="nextDisc text-capitalize mt-3 pb-1"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="location-p3 p-3 ">
+                        <div class="p1-small mb-2 d-flex justify-content-center ">
+                            <span class="text-capitalize nextDay"></span>
+                        </div>
+                        <hr>
+                        <div class="p1-larg my-2 d-flex justify-content-center align-items-center flex-column">
+                            <img src="" class="nextIcon "  alt="">
+                            <div class="d-flex justify-content-between">
+                              <span class="maxDegree my-2 me-1"></span>
+                              <span class="icon-deg "><sup>o</sup>c</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                              <span class="minDegree pt-3 ">day</span>
+                              <span class="icon-deg"><sup>o</sup>c</span>
+                            </div>
+                            <span class="nextDisc text-capitalize mt-3 pb-1"></span> 
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="container-fluid div-container">
+                <div class="container weather pt-5 position-relative">
+                    <input id="email-input" type="text" class="form-control py-3 w-75 mx-auto rounded-5 border-0" placeholder="enter your email to subscribe...">
+                    <button id="event-btn" class="btn btn-info text-white text-capitalize px-4 rounded-5">subscribe</button>
+                    
+                </div>
+                <p id="text-box" class="mt-4 text-light text-center text-uppercase"></p>
+            </div>
+            
+            
+        </div>
+      </section>
+    <script src="../JS/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>
